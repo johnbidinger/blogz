@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- display all blog posts -->
+<form method='post'>
+    <div class="form-group">
+        <input class="form-control" type="text" name='title' />
+        <input class="form-control" type="textarea" name='body' />
+    </div>
+    <input type="submit" value='Add Post' class="btn btn-default" />
+</form>
+
+{% endblock %}
