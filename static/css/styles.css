@@ -8,3 +8,9 @@
 .glyphicon-remove {
     color: red;
 }
+.error {
+    color: red;
+}
+.navbar-btn {
+    margin-right: 10px;
+}

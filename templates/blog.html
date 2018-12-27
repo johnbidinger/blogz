@@ -2,12 +2,22 @@
 
 {% block content %}
 <!-- display all blog posts -->
-<form method='post'>
-    <div class="form-group">
-        <input class="form-control" type="text" name='title' />
-        <input class="form-control" type="textarea" name='body' />
-    </div>
-    <input type="submit" value='Add Post' class="btn btn-default" />
-</form>
+{% if blogs|length == 0 %}
+<p>No blog posts yet</p>
+{% else %}
+    
+    {% for post in blogs %}
+    <ul>
+    <li>
+        <a href="./blog?id={{post.id}}"><h2>{{post.title}}</h2></a>
+    </li>
+    <li>
+        {{post.body}}
+    </li><hr>   
+    </ul>
+    {% endfor %}
+
+    
+{% endif %}
 
 {% endblock %}

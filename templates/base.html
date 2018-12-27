@@ -15,28 +15,32 @@
 <body>
 
     <nav class="navbar navbar-default">
-        <a href='/' class="navbar-brand">Get It Done!</a>
-        {% if 'email' in session %}
+        <a href='/' class="navbar-brand">Nav 1Bar</a>
+        
         <ul class="nav navbar-nav navbar-right">
-            <li class="navbar-text">{{ session['email'] }}</li>
             <li>
-                <form method="post" action="/logout">
-                    <button class="btn btn-default navbar-btn">log out</button>
+                <form method="GET" action="/blog">
+                    <button class="btn btn-default navbar-btn">All Blogs</button>
+                </form>
+            </li>
+            <li>
+                <form method='get' action="/newpost">
+                    <button class="btn btn-default navbar-btn">New Post</button>
                 </form>
             </li>
         </ul>
-        {% endif %}
+        
     </nav>
 
 <div class="container">
-
+<!-- 
     {% with messages = get_flashed_messages(with_categories=True) %}
         {% for category,message in messages %}
         <div class="alert alert-{{category}} alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             {{message|safe}}</div>
         {% endfor %}
-    {% endwith %}
+    {% endwith %} -->
 
     <div class="row">
         <div class="col-md-2"></div>
@@ -44,7 +48,7 @@
         {% block content %}
 
         <!-- block content inserted here -->
-        
+
         {% endblock %}
         </div>
         <div class="col-md-2"></div>

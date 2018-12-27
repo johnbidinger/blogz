@@ -4,4 +4,17 @@
 <!-- display newpost form -->
 
 
+<form method='post'>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input class="form-control" type="text" name='blog_title' value="{{blog_title}}" />
+            <p class="error">{{title_error}}</p>
+            <label for="body">Blog Body</label>
+            <textarea class="form-control" name='body' >{{body}}</textarea>
+            <span class="error">{{body_error}}</span>
+        </div>
+        <input type="submit" value='Add Post' class="btn btn-default" />
+    </form>
+
+
 {% endblock %}
