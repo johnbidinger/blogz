@@ -2,23 +2,22 @@
 
 {% block content %}
 <!-- display all blog posts -->
-{% if blogs|length == 0 %}
+{% if posts|length == 0 %}
 <p>No blog posts yet</p>
 {% else %}
     
-    {% for post in blogs %}
-    <p>
+    {% for post in posts %}
+    
         <a href="./blog?id={{post.id}}"><h2>{{post.title}}</h2></a>
     
-    
+    <p>
         {{post.body}}
-    
-    </p>    
-    
+    </p>
+        
+        <p>
             Written by<a href="./blog?userID={{post.owner.id}}"> {{post.owner.username}}</a>
-    
+        </p><hr>
 
-    <hr>   
     
     {% endfor %}
 

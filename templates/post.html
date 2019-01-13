@@ -4,5 +4,5 @@
 <!-- display selected blog posts -->
 <h2>{{blog.title}}</h2>
 <p>{{blog.body}}</p>
-
+<p>Written by:<a href='./blog?userID={{blog.owner.id}}'> {{blog.owner.username}}</a></p>
 {% endblock %}
